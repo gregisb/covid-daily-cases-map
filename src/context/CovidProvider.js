@@ -35,7 +35,6 @@ const fetchAllDates = async (setDatesList) => {
     .rpc('get_all_dates');
   const strArr = data.map((currentDate) => currentDate.date)
   setDatesList(strArr);
-  console.log('loading false')
   // setIsLoading(false)
 };
 
@@ -80,7 +79,6 @@ function CovidProvider({ children }) {
 
 
   useEffect(() => {
-    console.log('isCumulative', isCumulative)
     if (datesList.length > 0) {
       if (currentDate) {
         fetchData(currentDate, setData, isCumulative)
