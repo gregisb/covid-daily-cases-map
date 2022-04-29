@@ -1,26 +1,44 @@
-import moment from 'moment';
-import React, { useContext, useState } from 'react';
-import CovidContext from '../../context/CovidContext';
-import './Slider.css';
-
-
-
-
-
-const handleChange = (e, setCurrentDate, datesList) => {
-  
-  setCurrentDate(datesList[e.target.value]);
-  document.getElementById('bubble').id = ''
-};
-
-
-
+import moment from "moment";
+import React, { useContext } from "react";
+import { useSearchParams } from "react-router-dom";
+import CovidContext from "../../context/CovidContext";
+import "./Slider.css";
 
 const Slider = () => {
   const { currentDate, setCurrentDate, datesList } = useContext(CovidContext);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  if (!currentDate) {
+    const queryDate = searchParams.get("date");
+    if (datesList.indexOf(queryDate) > 0) {
+      setCurrentDate(queryDate);
+    } else {
+      setCurrentDate(datesList[0]);
+    }
+  }
+
+  const handleChange = (e, setCurrentDate, datesList) => {
+    setCurrentDate(datesList[e.target.value]);
+    updateUrl();
+  };
+
+  const updateUrl = () => {
+    setSearchParams({ date: currentDate });
+  };
+
+  const handlePlay = (date) => {
+    setCurrentDate(date);
+    setTimeout(() => {
+      const curId = datesList.indexOf(date);
+      if (curId < datesList.length - 1) {
+        handlePlay(datesList[curId + 1]);
+      }
+    }, 100);
+  };
 
   return (
     <div className="range-container">
+      <button onClick={() => handlePlay(datesList[0])}>Play</button>
       <input
         name="range"
         className="dates-range"
@@ -28,21 +46,26 @@ const Slider = () => {
         min="0"
         onChange={(e) => handleChange(e, setCurrentDate, datesList)}
         max={datesList.length - 1}
-        step='1'
+        step="1"
         list="tickmarks"
+        value={datesList.indexOf(currentDate)}
       />
       <datalist id="tickmarks">
-        {datesList.map((_mark, index) => <option key={index} value={index} />)}
+        {datesList.map((mark, index) => (
+          <option key={index} value={index} />
+        ))}
       </datalist>
       <div>
-        <span id="bubble" className="position btn btn-outline-dark" style={{cursor: 'default'}}>{currentDate}</span>
+        <span
+          id="bubble"
+          className="position btn btn-outline-dark"
+          style={{ cursor: "default" }}
+        >
+          {currentDate}
+        </span>
       </div>
-      
-      
     </div>
-    
-  )
-  
-}
+  );
+};
 
 export default Slider;

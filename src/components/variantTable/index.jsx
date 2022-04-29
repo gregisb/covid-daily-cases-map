@@ -15,11 +15,12 @@ const VariantTable = ({ variantList, country }) => {
       <div>
         <p style={{ fontWeight: "bold" }}>{country}</p>
         <table>
+          <thead>
           <th>Variant</th>
           <th>Number of cases</th>
-
+          </thead>
           {variantList.map((currentVariant) => (
-            <tr>
+            <tr key={currentVariant.variant}>
               <td>{currentVariant.variant}</td>
               <td>{currentVariant.num_sequences}</td>
             </tr>

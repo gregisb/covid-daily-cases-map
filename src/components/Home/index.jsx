@@ -21,7 +21,7 @@ const Home = () => {
       <div className='main-container'>
         <SelectButton />
         <Slider />
-        <MapChart setTooltipContent={setContent} />
+        <MapChart setTooltipContent={setContent} variantList={currentCountryVariants}/>
         <ReactTooltip className='custom-tooltip'><VariantTable country={country} variantList={currentCountryVariants}/></ReactTooltip>
       </div>
       <Footer />
