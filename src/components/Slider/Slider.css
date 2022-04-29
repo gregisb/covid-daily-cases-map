@@ -1,0 +1,16 @@
+.range-container {
+  width: 40%;
+}
+.dates-range {
+  cursor: pointer;
+  width: 100%;
+}
+
+.position {
+  position: relative;
+  /* left: -7%; */
+}
+
+#bubble::after {
+  content: '2020-05-11'
+}
