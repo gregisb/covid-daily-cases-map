@@ -15,7 +15,7 @@ import VariantTable from "../variantTable/VariantTable";
 
 
 
-const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
+const geoUrl = process.env.REACT_APP_GEOURL;
 
 const MapChart = ({ setTooltipContent }) => {
 
