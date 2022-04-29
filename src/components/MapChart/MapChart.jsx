@@ -15,35 +15,11 @@ import VariantTable from "../variantTable/VariantTable";
 
 
 
-const geoUrl = process.env.REACT_APP_GEOURL;
+const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
 
 const MapChart = ({ setTooltipContent }) => {
 
   const { cases, isLoading, customSetCountry } = useContext(CovidContext);
-
-
-  // const filterCountryCases = (CountryName) => {
-
-  //   const countryCases = cases.filter(({location}) => CountryName.includes(location));
-
-  //   const countryData = countryCases.map((country) => (
-  //     `<tr>
-  //       <td>${country.variant}</td>
-  //       <td>${country.total}</td>
-  //     </tr>`
-  //     ))
-
-  //   if (countryCases.length === 0) return 'Sem dados deste país'
-  //   return (
-  //     `<table>
-  //       <tr>
-  //         <th>Variante</td>
-  //         <th>nº casos</th>
-  //       </tr>
-  //       ${countryData.join('')}
-  //     </table>`)
-  // }
-
   
   return (
     <div className='map-chart'>
