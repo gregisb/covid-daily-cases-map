@@ -9,7 +9,7 @@ import CovidContext from "../../context/CovidContext";
 
 import './MapChart.css'
 import logo from '../../assets/loading.gif' 
-import VariantTable from "../variantTable/VariantTable";
+import VariantTable from "../variantTable";
 
 
 

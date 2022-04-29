@@ -1,13 +1,13 @@
 import React, {useContext, useState} from 'react';
 import './Home.css';
-import Footer from './../Footer/Footer';
-import Header from './../Header/Header';
-import MapChart from './../MapChart/MapChart';
+import Footer from '../Footer';
+import Header from '../Header';
+import MapChart from '../MapChart';
 import ReactTooltip from "react-tooltip";
-import Slider from './../Slider/Slider';
-import SelectButton from './../SelectButton/SelectButton';
+import Slider from '../Slider';
+import SelectButton from '../SelectButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import VariantTable from './../variantTable/VariantTable';
+import VariantTable from './../variantTable/';
 
 import CovidContext from "./../../context/CovidContext";
 

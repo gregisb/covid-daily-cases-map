@@ -4,6 +4,9 @@ import CovidContext from '../../context/CovidContext';
 import './Slider.css';
 
 
+
+
+
 const handleChange = (e, setCurrentDate, datesList) => {
   
   setCurrentDate(datesList[e.target.value]);
@@ -37,7 +40,9 @@ const Slider = () => {
       
       
     </div>
+    
   )
+  
 }
 
 export default Slider;
