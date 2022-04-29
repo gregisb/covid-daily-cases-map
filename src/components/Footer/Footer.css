@@ -1,0 +1,8 @@
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 110px
+}
+
