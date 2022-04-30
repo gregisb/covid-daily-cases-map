@@ -25,13 +25,13 @@ This is a challenge by [Coodesh](https://coodesh.com/)
 
 **Obrigatório 4** - Ao passar o mouse sobre um país, exiba seu nome e a quantidade de casos de cada variante registrados naquela data :heavy_check_mark:
 
-**Diferencial 1** - Escrever Unit Tests ou E2E Test. Escolher a melhor abordagem e biblioteca;
+**Diferencial 1** - Escrever Unit Tests ou E2E Test. Escolher a melhor abordagem e biblioteca; :heavy_multiplication_x:
 
 **Diferencial 2** - Configurar Docker no Projeto para facilitar o Deploy da equipe de DevOps; :heavy_check_mark:
 
 **Diferencial 3** - Colocar na URL os parametros utilizados na busca, para que seja possível compartilhar a URL; :heavy_check_mark:
 
-**Diferencial 4** - Implementar SSR no projeto;
+**Diferencial 4** - Implementar SSR no projeto; :heavy_multiplication_x:
 
 **Diferencial 5** - Adicionar um botão de "play" para exibir a evolução das dados automaticamente. :heavy_check_mark:
 
