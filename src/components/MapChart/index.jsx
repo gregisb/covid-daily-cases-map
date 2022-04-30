@@ -8,9 +8,8 @@ import {
 import CovidContext from "../../context/CovidContext";
 
 import './MapChart.css'
-import logo from '../../assets/loading.gif' 
-import VariantTable from "../variantTable";
-import { scaleLinear, scaleLog, scaleQuantize } from "d3-scale";
+
+import { scaleLog } from "d3-scale";
 
 
 
@@ -59,7 +58,6 @@ const MapChart = ({ setTooltipContent }) => {
   
   return (
     <div className='map-chart'>
-      {isLoading && <img className="loading" src={logo} alt="loading..." />}
       <ComposableMap data-tip="" projectionConfig={{ scale: 150 }}>
         <ZoomableGroup zoom={1} minZoom={1} maxZoom={2} translateExtent={[[850, 650], [0, 0]]}>
           <Geographies geography={geoUrl}>
@@ -86,7 +84,6 @@ const MapChart = ({ setTooltipContent }) => {
                   }}
                   style={{
                     default: {
-                      // fill: "#746AB0",
                       outline: "none",
                       stroke: '#fff',
                       strokeWidth: '0.3'

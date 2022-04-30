@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CovidContext from "./CovidContext";
-import { supabase, supabaseUrl } from "../supabase";
-import moment from "moment";
+import { supabase } from "../supabase";
 
 const mapCountryNames = {
   "United States of America": "United States",
@@ -27,7 +26,7 @@ const fetchData = async (currentDate, setData, isCumulative) => {
   }
 };
 
-const fetchAllDates = async (setDatesList, currentDate, setCurrentDate) => {
+const fetchAllDates = async (setDatesList) => {
   const { data, error } = await supabase.rpc("get_all_dates");
   const strArr = data.map((currentDate) => currentDate.date);
   setDatesList(strArr);

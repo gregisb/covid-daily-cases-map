@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import CovidContext from "../../context/CovidContext";
+import React from "react";
 
 const VariantTable = ({ variantList, country }) => {
   if (variantList.length === 0) {
@@ -16,15 +15,19 @@ const VariantTable = ({ variantList, country }) => {
         <p style={{ fontWeight: "bold" }}>{country}</p>
         <table>
           <thead>
-          <th>Variant</th>
-          <th>Number of cases</th>
+            <th>Variant</th>
+            <th>Number of cases</th>
           </thead>
-          {variantList.map((currentVariant) => (
-            <tr key={currentVariant.variant}>
-              <td>{currentVariant.variant}</td>
-              <td>{currentVariant.num_sequences}</td>
-            </tr>
-          ))}
+          {variantList.map((currentVariant) => {
+            if (currentVariant.num_sequences > 0) {
+              return (
+                <tr key={currentVariant.variant}>
+                  <td>{currentVariant.variant}</td>
+                  <td>{currentVariant.num_sequences}</td>
+                </tr>
+              );
+            }
+          })}
         </table>
       </div>
     );
