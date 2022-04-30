@@ -1,5 +1,5 @@
 import moment from "moment";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import CovidContext from "../../context/CovidContext";
 import "./Slider.css";
@@ -7,6 +7,7 @@ import "./Slider.css";
 const Slider = () => {
   const { currentDate, setCurrentDate, datesList } = useContext(CovidContext);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [counter, setCounter] = useState(0);
 
   if (!currentDate) {
     const queryDate = searchParams.get("date");
@@ -33,12 +34,12 @@ const Slider = () => {
       if (curId < datesList.length - 1) {
         handlePlay(datesList[curId + 1]);
       }
-    }, 100);
+    }, 1500);
   };
 
   return (
     <div className="range-container">
-      <button onClick={() => handlePlay(datesList[0])}>Play</button>
+      <button className="button" onClick={() => handlePlay(datesList[0])}><i class="bi bi-play"></i>Play</button>
       <input
         name="range"
         className="dates-range"

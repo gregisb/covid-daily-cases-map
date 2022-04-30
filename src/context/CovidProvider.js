@@ -22,7 +22,6 @@ const fetchData = async (currentDate, setData, isCumulative) => {
       .from("covid_data")
       .select()
       .eq("date", currentDate);
-    // .eq('date', currentDate.format('YYYY-MM-DD'))
 
     setData(data);
   }
