@@ -15,6 +15,10 @@ This is a challenge by [Coodesh](https://coodesh.com/)
 * CSS
 * Bootstrap
 
+## Demo
+
+https://covid-daily-cases-map.vercel.app/
+
 # Desafio
 
 **Obrigatório 1** - Seguir o wireframe para a página de listagem dos dados; :heavy_check_mark:
