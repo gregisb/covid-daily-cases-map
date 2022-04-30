@@ -21,7 +21,7 @@ const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-map
 
 const MapChart = ({ setTooltipContent }) => {
 
-  const { data, isLoading, customSetCountry } = useContext(CovidContext);
+  const { data, customSetCountry } = useContext(CovidContext);
   
   const casesByCountry = {};
   let maxCases = 0;

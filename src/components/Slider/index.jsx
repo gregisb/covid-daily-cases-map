@@ -14,7 +14,7 @@ const Slider = () => {
     } else {
       setCurrentDate(datesList[0]);
     }
-  }
+  };
 
   const handleChange = (e, setCurrentDate, datesList) => {
     setCurrentDate(datesList[e.target.value]);

@@ -41,6 +41,10 @@ https://covid-daily-cases-map.vercel.app/
 
 **Diferencial 6** - Publique o projeto em alguma plataforma, como por exemplo a [Vercel](https://vercel.com/), [Netlify](https://www.netlify.com/) ou outra de sua preferência. :heavy_check_mark:
 
+# Apresentação do Projeto
+
+https://www.loom.com/share/14194dd37a6844488a606b192d864230
+
 
 # Instalação
 
