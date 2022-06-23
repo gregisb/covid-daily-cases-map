@@ -14,7 +14,7 @@ const Slider = () => {
     } else {
       setCurrentDate(datesList[0]);
     }
-  };
+  }
 
   const handleChange = (e, setCurrentDate, datesList) => {
     setCurrentDate(datesList[e.target.value]);
@@ -37,7 +37,9 @@ const Slider = () => {
 
   return (
     <div className="range-container">
-      <button className="button" onClick={() => handlePlay(datesList[0])}><i class="bi bi-play"></i>Play</button>
+      {/* <button className="button" onClick={() => handlePlay(datesList[0])}>
+        <i class="bi bi-play"></i>Play
+      </button> */}
       <input
         name="range"
         className="dates-range"
