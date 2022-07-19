@@ -15,7 +15,7 @@ import { scaleLog } from "d3-scale";
 
 
 
-const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
+const geoUrl = process.env.REACT_APP_GEOURL;
 
 
 
